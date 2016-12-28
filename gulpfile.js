@@ -12,5 +12,19 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass([
+    	'app.scss'
+    ], 'public/assets/css');
+
+    mix.scripts([
+    	'app.js'
+    ], 'public/assets/js');
+
+    // cache busting
+    mix.version(['assets/css/app.css', 'assets/js/all.js']);
 });
+
+
+// HOW TO
+// dev - "gulp"
+// production - "gulp --production"

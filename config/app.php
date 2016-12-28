@@ -156,6 +156,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Josh's Shopify API wrapper
+         */
+        RocketCode\Shopify\ShopifyServiceProvider::class,
     ],
 
     /*
